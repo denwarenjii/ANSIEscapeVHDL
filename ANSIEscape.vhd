@@ -12,6 +12,10 @@ use std.standard.all;
 
 package ANSIEscape is
   
+  -- Begin with foreground color and end with reset.
+  -- Example:
+  --  report BLUE & "This is a blue message" & ANSI_RESET;
+  --
   constant ANSI_RESET     : string :=  ESC & '[' & '0' & 'm';        -- ESC[0m
   constant BLACK          : string :=  ESC & '[' & '3' & '0' & 'm';  -- ESC[30m
   constant RED            : string :=  ESC & '[' & '3' & '1' & 'm';  -- ESC[31m
